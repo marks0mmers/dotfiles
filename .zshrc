@@ -131,6 +131,7 @@ export EDITOR=nvim
 alias k='kubectl'
 alias vim='nvim'
 alias vi='nvim'
+alias v='nvim .'
 alias oldvim='\vim'
 
 fi
