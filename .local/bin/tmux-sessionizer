@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ ~/Developer/Work ~/Developer/Personal -mindepth 1 -maxdepth 2 -type d -path /Users/teksystems/.Trash -prune -o -print | fzf)
+    selected=$(find ~ ~/Developer/Work ~/Developer/Personal ~/Development/tools -mindepth 1 -maxdepth 3 -type d -path /Users/teksystems/.Trash -prune -o -print | fzf)
 fi
 
 if [[ -z $selected ]]; then

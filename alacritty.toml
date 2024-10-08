@@ -1,0 +1,6 @@
+[general]
+import = ["./tokyonight_night.toml"]
+
+[font]
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+size = 12
