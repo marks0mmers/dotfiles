@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/.local/bin:$PATH
 export PATH="~/bin:$PATH"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 if [[ $(uname) == "Darwin" ]]; then
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
@@ -120,6 +119,7 @@ if [[ $(uname) == "Darwin" ]]; then
     export PATH="$PATH:$HOME/go/bin"
 else 
     export PATH="$PATH:/usr/local/go/bin"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 # BEGIN opam configuration
