@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/.local/bin:$PATH
 export PATH="~/bin:$PATH"
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 if [[ $(uname) == "Darwin" ]]; then
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
     eval "$(rbenv init -)"
@@ -125,6 +127,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export EDITOR=nvim
+. ~/.cargo/env
 
 ~/.config/fzf/tokyonight_night.sh
 
