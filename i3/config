@@ -31,7 +31,7 @@ exec --no-startup-id nitrogen --restore
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color 04090e --nofork
-exec_always --no-startup-id xset +dpms dpms 0 300 300 
+exec_always --no-startup-id xset +dpms dpms 0 0 1200 
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh 
 bindsym $mod+x mode "lock"
 
