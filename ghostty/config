@@ -2,4 +2,5 @@ font-family = "FiraCode Nerd Font Mono"
 font-size = 14
 background-opacity = 0.8
 theme = tokyonight
-macos-titlebar-style = hidden
+macos-titlebar-style = transparent
+mouse-hide-while-typing = true
