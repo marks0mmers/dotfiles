@@ -116,7 +116,7 @@ if [[ $(uname) == "Darwin" ]]; then
     export PATH="$(brew --prefix llvm)/bin:${PATH}"
     export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
     export PATH="$BUN_INSTALL/bin:$PATH" 
-    export PATH="$PATH:$HOME/go/bin"
+    export PATH="$PATH:/usr/local/go/bin"
     export PATH="$PATH:/Applications/Ghostty.app/Contents/MacOS"
 else 
     export PATH="$PATH:/usr/local/go/bin"
