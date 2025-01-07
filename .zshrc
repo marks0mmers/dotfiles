@@ -73,6 +73,8 @@ ENABLE_CORRECTION="true"
 plugins=(
     git
     zsh-autosuggestions
+    you-should-use
+    zsh-bat
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,7 +110,7 @@ export PATH="~/bin:$PATH"
 
 
 if [[ $(uname) == "Darwin" ]]; then
-    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home
     eval "$(rbenv init -)"
     export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
     export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
@@ -118,6 +120,11 @@ if [[ $(uname) == "Darwin" ]]; then
     export PATH="$BUN_INSTALL/bin:$PATH" 
     export PATH="$PATH:/usr/local/go/bin"
     export PATH="$PATH:/Applications/Ghostty.app/Contents/MacOS"
+    export PATH="$PATH:$HOME/.juliaup/bin"
+
+    [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+    luaver set-default-luarocks 3.11.1 > /dev/null
+    luaver set-default 5.1 > /dev/null
 else 
     export PATH="$PATH:/usr/local/go/bin"
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -135,6 +142,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export EDITOR=nvim
@@ -149,6 +157,7 @@ alias v='nvim .'
 alias oldvim='\vim'
 
 fi
+
 
 
 
