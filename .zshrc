@@ -8,25 +8,27 @@ plugins=(
     zsh-autosuggestions
     you-should-use
     zsh-bat
+    aws
+    kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
 export PATH=~/.local/bin:$PATH
+export PATH=$GHOSTTY_BIN_DIR:$PATH
 
 if [[ $(uname) == "Darwin" ]]; then
     export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home
     export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
     export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
-    export PATH="~/flutter/bin:$PATH"
     export PATH="$(brew --prefix llvm)/bin:${PATH}"
     export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
     export PATH="$BUN_INSTALL/bin:$PATH" 
     export PATH="/usr/local/go/bin:$PATH"
-    export PATH="/Applications/Ghostty.app/Contents/MacOS:$PATH"
     export PATH="$HOME/.juliaup/bin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
+    export PATH="/opt/homebrew/Cellar/zigup/2025.01.02/bin:$PATH"
     eval "$(rbenv init -)"
     eval "$(zoxide init zsh)"
 
