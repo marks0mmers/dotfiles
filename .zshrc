@@ -1,7 +1,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
+DISABLE_AUTO_UPDATE=true
 ENABLE_CORRECTION="true"
+
 
 plugins=(
     git
@@ -26,6 +28,7 @@ if [[ $(uname) == "Darwin" ]]; then
     export PATH="/opt/homebrew/opt/ruby@2.7/bin:$PATH"
     export PATH="$BUN_INSTALL/bin:$PATH" 
     export PATH="/usr/local/go/bin:$PATH"
+    export PATH="$HOME/go/bin:$PATH"
     export PATH="$HOME/.juliaup/bin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
     export PATH="/opt/homebrew/Cellar/zigup/2025.01.02/bin:$PATH"
@@ -55,8 +58,7 @@ source <(fzf --zsh)
 
 alias k='kubectl'
 alias vim='nvim'
-alias vi='nvim'
-alias v='nvim .'
+alias v='nvim'
 alias vzshrc='nvim ~/.zshrc'
 alias szshrc='source ~/.zshrc'
 alias oldvim='\vim'
