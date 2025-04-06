@@ -31,7 +31,10 @@ if [[ $(uname) == "Darwin" ]]; then
     export PATH="$HOME/go/bin:$PATH"
     export PATH="$HOME/.juliaup/bin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
+    export PATH="/opt/homebrew/sbin:$PATH"
     export PATH="/opt/homebrew/Cellar/zigup/2025.01.02/bin:$PATH"
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
     eval "$(rbenv init -)"
     eval "$(zoxide init zsh)"
 
